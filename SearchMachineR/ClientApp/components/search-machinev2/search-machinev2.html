@@ -1,0 +1,33 @@
+﻿<h1>Search Machine Task</h1>
+<p>Insert your text and get  the results</p>
+<input type="text" data-bind="value: searchText" />
+<button data-bind='click: searchMachinev2Action'>Search</button>
+<!--<label data-bind="text: searchResultJson()"></label>-->
+<div data-bind="with: searchResult() ">
+    <ul data-bind="foreach: searchEngineResults">
+        <li>
+          
+            <ul data-bind="foreach: searchEngineValues">
+                <li>
+                    <!--ko if : searchEngineOriginType === 1-->
+                    <img src="images/Google__G__Logo.svg.png" />
+                    <!-- /ko -->
+                    <!--ko if : searchEngineOriginType === 2-->
+                    <img src="images/Bing.png"/>
+                    <!-- /ko -->
+                    <!--ko if : searchEngineOriginType === 3-->
+                    <img src="images/download.png" />
+                    <!-- /ko -->
+                    <!--ko if : searchEngineOriginType === 4-->
+                    <img src="images/logo_header.v107.min.svg" />
+                    <!-- /ko -->
+                    <label data-bind="text:searchEngineName"></label> <span> query :</span>
+                    <label data-bind="text:textQuery"></label> <span> results: </span>
+                    <label data-bind="text:counter"></label>
+                </li>
+            </ul>
+            <h4>result aggregated </h4>
+            <label data-bind="text: aggregate"></label>
+        </li>
+    </ul>
+</div>

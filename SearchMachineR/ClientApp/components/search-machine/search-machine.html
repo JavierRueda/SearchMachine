@@ -1,0 +1,56 @@
+﻿<h1>Search Machine Task</h1>
+<p>Insert your text and get  the results</p>
+<input type="text" data-bind="value: searchText" />
+<button data-bind='click: searchMachineAction'>Search</button>
+<div class="row" id="googleArea" data-bind="if :googleResultsSum() > 0">
+    <h5>Total results count per text query:</h5>
+    <ul data-bind="foreach:  googleResults">
+        <li class="divider">
+            <img src="images/Google__G__Logo.svg.png"/><label data-bind="text:query"></label>:<label data-bind="text: counter"></label>
+        </li>
+    </ul>
+    <div>
+        
+        <h4><img src="images/Google__G__Logo.svg.png" /> Aggregate results:<label data-bind="text:googleResultsSum"></label></h4>
+        
+    </div>
+
+
+</div>
+<div class="row" data-bind="if :bingResultsSum() > 0">
+    <h5>Total results count per text query:</h5>
+    <ul data-bind="foreach: bingResults">
+        <li class="divider">
+            <img src="images/Bing.png"/><label data-bind="text:query"></label>:<label data-bind="text: counter"></label>
+        </li>
+    </ul>
+    <div>
+       <h4><img src="images/Bing.png" /> Aggregate results:<label data-bind="text:bingResultsSum"></label></h4>
+
+    </div>
+</div>
+<div class="row" data-bind="if :gogoduckResultsSum() > 0">
+    <h5>Total results count per text query:</h5>
+    <ul data-bind="foreach: gogoduckResults">
+        <li class="divider">
+            <img src="images/logo_header.v107.min.svg"/><label data-bind="text:query"></label>:<label data-bind="text: counter"></label>
+        </li>
+    </ul>
+    <div>
+        <h4><img src="images/logo_header.v107.min.svg" /> Aggregate results:<label data-bind="text:gogoduckResultsSum"></label> </h4>
+     
+    </div>
+</div>
+<div class="row" data-bind="if :ecosiaResultsSum() > 0">
+    <h5>Total results count per text query:</h5>
+    <ul data-bind="foreach: ecosiaResults">
+        <li class="divider">
+            <img src="images/download.png"/><label data-bind="text:query"></label>:<label data-bind="text: counter"></label>
+        </li>
+    </ul>
+    <div>
+        <h4><img src="images/download.png" />Aggregate results:<label data-bind="text:ecosiaResultsSum"></label> </h4>
+       
+    </div>
+</div>
+

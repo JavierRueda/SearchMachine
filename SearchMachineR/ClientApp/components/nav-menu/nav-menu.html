@@ -1,0 +1,34 @@
+<div class='main-nav'>
+        <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' href='/'>SearchMachineR</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li>
+                    <a data-bind='attr: { href: router.link("/") }, css: { active: route().page === "home-page" }'>
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+                <li>
+                    <a data-bind='attr: { href: router.link("/search-machine") }, css: { active: route().page === "search-machine" }'>
+                        <span class='glyphicon glyphicon-search'></span> Frontend Solution Search
+                    </a> 
+                </li>
+                <li>
+                    <a data-bind='attr: { href: router.link("/search-machinev2") }, css: { active: route().page === "search-machinev2" }'>
+                        <span class='glyphicon glyphicon-search'></span> Backend Solution Search
+                    </a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
